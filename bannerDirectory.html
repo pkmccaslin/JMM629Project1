@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Directory</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 20px;
+        }
+        .bar {
+            cursor: pointer;
+            border-radius: 20px;
+            transition: filter 0.5s;
+        }
+        .bar:hover {
+            transition: filter 0.5s;
+            filter: brightness(50%);
+        }
+        .axis-label {
+            font-size: 14px;
+        }
+        #details {
+            margin-top: 20px;
+        }
+        .person-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            display: inline-block;
+        }
+        .person-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /*to center image on card*/
+            display: block;
+            margin: 0 auto;
+        }
+        .box {
+            width: 150px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 8px;
+        }
+        .profilePic {
+            width: 100px;  /* Adjust size as needed */
+            height: 100px;
+            border-radius: 50px;  /* Makes it circular */
+            object-fit: cover;  /* Ensures the image is cropped properly */
+            border: 2px solid #333;  /* Optional: adds a border */
+            display: block;  /* Ensures correct alignment */
+            margin: 5px 0;  /* Adds spacing */
+        }
+        .person-card {
+          border: 1px solid #ddd;
+          padding: 10px;
+          margin: 10px;
+          border-radius: 10px;
+          width: 250px;
+        }
+
+        .para {
+          font-size: 12px;
+          text-align: justify;
+          line-height: 1.5;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>The Banner Directory according to past papers</h1>
+
+    <svg id="chart" width="1500" height="3200"></svg>
+
+    <div id="details"></div>
+
+    <script src="bannerScript.js"></script>
+
+</body>
+</html>
